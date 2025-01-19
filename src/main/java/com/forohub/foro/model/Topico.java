@@ -1,16 +1,16 @@
 package com.forohub.foro.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
+
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Entity
 @Table(name = "topicos")
 public class Topico {
@@ -25,7 +25,7 @@ public class Topico {
 
     private LocalDate fecha;
 
-    private String status;
+    private Boolean status;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -33,4 +33,9 @@ public class Topico {
 
     private String curso;
 
+    public Topico(@NotBlank String titulo, @NotBlank String mensaje, @NotBlank String curso) {
+            this.titulo = titulo;
+            this.mensaje = mensaje;
+            this.curso = curso;
+    }
 }
