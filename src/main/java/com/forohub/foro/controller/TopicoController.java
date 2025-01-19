@@ -26,9 +26,15 @@ public class TopicoController {
 
     @GetMapping
     @Transactional
-    public ResponseEntity getAllTopicos(@PageableDefault(size = 5, page = 0) Pageable pageable) {
+    public ResponseEntity<Page<TopicoResponseDTO>> getAllTopicos(@PageableDefault(size = 5, page = 0) Pageable pageable) {
         Page<TopicoResponseDTO> topicos = topicoService.findAll(pageable);
         return ResponseEntity.ok().body(topicos);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<TopicoResponseDTO> getTopico(@PathVariable Long id) {
+        TopicoResponseDTO topico = topicoService.findById(id);
+        return ResponseEntity.ok().body(topico);
     }
 
     @PostMapping

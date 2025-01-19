@@ -7,7 +7,6 @@ public record TopicoUpdateDTO(
         Long id,
         String titulo,
         String mensaje,
-        Boolean status,
         String curso
 ) {
 
