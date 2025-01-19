@@ -76,9 +76,6 @@ public class TopicoService {
         if (obj.mensaje() != null) {
             topico.setMensaje(obj.mensaje());
         }
-        if (obj.status() != null) {
-            topico.setStatus(obj.status());
-        }
     }
 
     private void desactivarStatus(Topico topico) {

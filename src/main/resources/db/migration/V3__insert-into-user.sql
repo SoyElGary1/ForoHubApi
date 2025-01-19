@@ -1,0 +1,1 @@
+insert into users (nombre, password, email) values ("user", "$2a$12$OEmRsi9l08wPXg15NPqxDuTfwXEaIqvOKxhz5Wa8b/7r5jiXxBUGC","user@gmail.com");
