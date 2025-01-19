@@ -56,6 +56,11 @@ URL base: `/api/topicos`
 ### Autenticación
 URL base: `/login`
 
+### Credenciales de login
+
+Email: user@gmail.com
+Password: 123123
+
 | Método HTTP | Endpoint | Descripción                         |
 |--------------|----------|-------------------------------------|
 | POST         | `/login` | Autenticar usuario y obtener token JWT. |
@@ -176,6 +181,11 @@ Base URL: `/api/topicos`
 
 ### Authentication
 Base URL: `/login`
+
+### Login credentials
+
+Email: user@gmail.com
+Password: 123123
 
 | HTTP Method | Endpoint | Description                   |
 |-------------|----------|-------------------------------|
